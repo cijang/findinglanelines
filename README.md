@@ -1,6 +1,6 @@
-# factory_bot [![Build Status][ci-image]][ci] [![Code Climate][grade-image]][grade] [![Gem Version][version-image]][version]
+# Finding Lane Lines [![Build Status][ci-image]][ci] [![Code Climate][grade-image]][grade] [![Gem Version][version-image]][version]
 
-factory_bot is a fixtures replacement with a straightforward definition syntax, support for multiple build strategies (saved instances, unsaved instances, attribute hashes, and stubbed objects), and support for multiple factories for the same class (user, admin_user, and so on), including factory inheritance.
+In this project, Finding Lane Lines is .....
 
 If you want to use factory_bot with Rails, see
 [factory_bot_rails](https://github.com/thoughtbot/factory_bot_rails).
@@ -29,7 +29,7 @@ Install
 Add the following line to Gemfile:
 
 ```ruby
-gem 'factory_bot'
+gem 'Finding Lane Lines'
 ```
 
 and run `bundle install` from your shell.
