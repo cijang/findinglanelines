@@ -18,11 +18,13 @@ Helper Function
 - weighted_img function is used to draw the weighted lines on top of the output image from hough_lines.
 
 Reflection
+---
 
 My solution draws a little longer lines than the actual lane lines. I think the vertices have to be adjusted to lower the top portion. I also think there is a room to improve the calculation logic for the average slope and center.
 The Project
----
 
+Project
+---
 ## If you have already installed the [CarND Term1 Starter Kit](https://github.com/udacity/CarND-Term1-Starter-Kit/blob/master/README.md) you should be good to go!   If not, you should install the starter kit to get started on this project. ##
 
 **Step 1:** Set up the [CarND Term1 Starter Kit](https://github.com/udacity/CarND-Term1-Starter-Kit/blob/master/README.md) if you haven't already.
