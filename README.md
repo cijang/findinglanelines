@@ -1,104 +1,56 @@
-# Finding Lane Lines [![Build Status][ci-image]][ci] [![Code Climate][grade-image]][grade] [![Gem Version][version-image]][version]
+# **Finding Lane Lines on the Road** 
+[![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
-In this project, Finding Lane Lines is .....
+<img src="examples/laneLines_thirdPass.jpg" width="480" alt="Combined Image" />
 
-If you want to use factory_bot with Rails, see
-[factory_bot_rails](https://github.com/thoughtbot/factory_bot_rails).
+Overview
+---
 
-_[Interested in the history of the project name?][NAME]_
+When we drive, we use our eyes to decide where to go.  The lines on the road that show us where the lanes are act as our constant reference for where to steer the vehicle.  Naturally, one of the first things we would like to do in developing a self-driving car is to automatically detect lane lines using an algorithm.
 
+In this project you will detect lane lines in images using Python and OpenCV.  OpenCV means "Open-Source Computer Vision", which is a package that has many useful tools for analyzing images.  
 
-### Transitioning from factory\_girl?
+To complete the project, two files will be submitted: a file containing project code and a file containing a brief write up explaining your solution. We have included template files to be used both for the [code](https://github.com/udacity/CarND-LaneLines-P1/blob/master/P1.ipynb) and the [writeup](https://github.com/udacity/CarND-LaneLines-P1/blob/master/writeup_template.md).The code file is called P1.ipynb and the writeup template is writeup_template.md 
 
-Check out the [guide](https://github.com/thoughtbot/factory_bot/blob/4-9-0-stable/UPGRADE_FROM_FACTORY_GIRL.md).
-
-
-Documentation
--------------
-
-You should find the documentation for your version of factory_bot on [Rubygems](https://rubygems.org/gems/factory_bot).
-
-See [GETTING_STARTED] for information on defining and using factories. We also
-have [a detailed introductory video][], available for free on Upcase.
-
-[a detailed introductory video]: https://upcase.com/videos/factory-bot?utm_source=github&utm_medium=open-source&utm_campaign=factory-girl
-
-Install
---------
-
-Add the following line to Gemfile:
-
-```ruby
-gem 'Finding Lane Lines'
-```
-
-and run `bundle install` from your shell.
-
-To install the gem manually from your shell, run:
-
-```shell
-gem install factory_bot
-```
-
-Supported Ruby versions
------------------------
-
-Supported Ruby versions are listed in [`.travis.yml`](https://github.com/thoughtbot/factory_bot/blob/master/.travis.yml)
-
-More Information
-----------------
-
-* [Rubygems](https://rubygems.org/gems/factory_bot)
-* [Stack Overflow](https://stackoverflow.com/questions/tagged/factory-bot)
-* [Issues](https://github.com/thoughtbot/factory_bot/issues)
-* [GIANT ROBOTS SMASHING INTO OTHER GIANT ROBOTS](https://robots.thoughtbot.com/)
-
-[GETTING_STARTED]: https://github.com/thoughtbot/factory_bot/blob/master/GETTING_STARTED.md
-[NAME]: https://github.com/thoughtbot/factory_bot/blob/master/NAME.md
-
-Useful Tools
-------------
-
-* [FactoryTrace](https://github.com/djezzzl/factory_trace) - helps to find unused factories and traits.
-
-Contributing
-------------
-
-Please see [CONTRIBUTING.md](https://github.com/thoughtbot/factory_bot/blob/master/CONTRIBUTING.md).
-
-factory_bot was originally written by Joe Ferris and is maintained by thoughtbot.
-Many improvements and bugfixes were contributed by the [open source
-community](https://github.com/thoughtbot/factory_bot/graphs/contributors).
-
-License
--------
-
-factory_bot is Copyright © 2008-2020 Joe Ferris and thoughtbot. It is free
-software, and may be redistributed under the terms specified in the
-[LICENSE] file.
-
-[LICENSE]: https://github.com/thoughtbot/factory_bot/blob/master/LICENSE
+To meet specifications in the project, take a look at the requirements in the [project rubric](https://review.udacity.com/#!/rubrics/322/view)
 
 
-About thoughtbot
-----------------
+Creating a Great Writeup
+---
+For this project, a great writeup should provide a detailed response to the "Reflection" section of the [project rubric](https://review.udacity.com/#!/rubrics/322/view). There are three parts to the reflection:
 
-![thoughtbot](https://thoughtbot.com/brand_assets/93:44.svg)
+1. Describe the pipeline
 
-factory_bot is maintained and funded by thoughtbot, inc.
-The names and logos for thoughtbot are trademarks of thoughtbot, inc.
+2. Identify any shortcomings
 
-We love open source software!
-See [our other projects][community] or
-[hire us][hire] to design, develop, and grow your product.
+3. Suggest possible improvements
 
-[community]: https://thoughtbot.com/community?utm_source=github
-[hire]: https://thoughtbot.com/hire-us?utm_source=github
-[ci-image]: https://travis-ci.org/thoughtbot/factory_bot.svg
-[ci]: https://travis-ci.org/thoughtbot/factory_bot?branch=master
-[grade-image]: https://codeclimate.com/github/thoughtbot/factory_bot/badges/gpa.svg
-[grade]: https://codeclimate.com/github/thoughtbot/factory_bot
-[version-image]: https://badge.fury.io/rb/factory_bot.svg
-[version]: https://badge.fury.io/rb/factory_bot
-[hound-badge-image]: https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg
-[hound]: https://houndci.com
+We encourage using images in your writeup to demonstrate how your pipeline works.  
+
+All that said, please be concise!  We're not looking for you to write a book here: just a brief description.
+
+You're not required to use markdown for your writeup.  If you use another method please just submit a pdf of your writeup. Here is a link to a [writeup template file](https://github.com/udacity/CarND-LaneLines-P1/blob/master/writeup_template.md). 
+
+
+The Project
+---
+
+## If you have already installed the [CarND Term1 Starter Kit](https://github.com/udacity/CarND-Term1-Starter-Kit/blob/master/README.md) you should be good to go!   If not, you should install the starter kit to get started on this project. ##
+
+**Step 1:** Set up the [CarND Term1 Starter Kit](https://github.com/udacity/CarND-Term1-Starter-Kit/blob/master/README.md) if you haven't already.
+
+**Step 2:** Open the code in a Jupyter Notebook
+
+You will complete the project code in a Jupyter notebook.  If you are unfamiliar with Jupyter Notebooks, check out [Udacity's free course on Anaconda and Jupyter Notebooks](https://classroom.udacity.com/courses/ud1111) to get started.
+
+Jupyter is an Ipython notebook where you can run blocks of code and see results interactively.  All the code for this project is contained in a Jupyter notebook. To start Jupyter in your browser, use terminal to navigate to your project directory and then run the following command at the terminal prompt (be sure you've activated your Python 3 carnd-term1 environment as described in the [CarND Term1 Starter Kit](https://github.com/udacity/CarND-Term1-Starter-Kit/blob/master/README.md) installation instructions!):
+
+`> jupyter notebook`
+
+A browser window will appear showing the contents of the current directory.  Click on the file called "P1.ipynb".  Another browser window will appear displaying the notebook.  Follow the instructions in the notebook to complete the project.  
+
+**Step 3:** Complete the project and submit both the Ipython notebook and the project writeup
+
+## How to write a README
+A well written README file can enhance your project and portfolio.  Develop your abilities to create professional README files by completing [this free course](https://www.udacity.com/course/writing-readmes--ud777).
+
