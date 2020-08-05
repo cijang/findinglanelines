@@ -20,8 +20,8 @@ Helper Function
 Reflection
 ---
 
-My solution draws a little longer lines than the actual lane lines. I think the vertices have to be adjusted to lower the top portion. I also think there is a room to improve the calculation logic for the average slope and center.
-The Project
+My solution is not identifying the interested region automatically. When an image has curves and shadows in a different region of the image, it could miscalculate the lane lines. It may have to improve the logic to identify the region of interest, range of white color channel, etc.
+
 
 Project
 ---
